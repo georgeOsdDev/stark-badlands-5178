@@ -1,0 +1,50 @@
+body {
+  padding-top: 60px;
+  font-family: Helvetica,Arial,sans-serif;
+  color: black;
+  background-color: #EEE;
+  background-image: url('../images/clean_textile.png');
+  word-wrap: break-word;
+}
+
+form textarea {
+  height: 100px;
+}
+
+label,
+.help-block
+ {
+  display: none;
+}
+
+.help-inline {
+  color: red;
+  padding-left: 25px;
+  padding-bottom: 10px;
+}
+
+#submit {
+  margin-top: -25px;
+  line-height: 10px;
+}
+
+#count {
+  padding-left: 5px;
+  color:lighten(@font-color, 30%);
+  font-size: 0.8em; 
+}
+
+@font-color: #333;
+.tweet {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  box-shadow: rgba(255,255,255,1.0) 0 1px 0px;
+  padding: 0.5em 0em 0.5em 0.5em;
+  .content {
+    color: @font-color
+  }
+  .created_at {
+    color:lighten(@font-color, 30%);
+    font-size: 0.8em;
+  }
+}
+

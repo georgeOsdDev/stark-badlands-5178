@@ -1,0 +1,28 @@
+@(tweetForm: Form[String], tweets: List[Tweet])
+
+@import helper._
+@import helper.twitterBootstrap._
+
+@main("Ore-witter") {
+<div class="row">
+  <div class="span9">
+    @form(routes.Application.tweet()){
+      @textarea(tweetForm("content"),'class->"input-xxlarge span9", 'id->"msg")
+      <div id="submit">
+        <span id="count"></span>
+        <input class="btn btn-primary pull-right" type="submit" value="tweet" />
+      </div>
+    }
+  </div>
+</div>
+<div class="row">
+  <div class="span9">
+    @for(tweet <- tweets){
+      <div class="tweet">
+        <div class="content">@tweet.content</div>
+        <div class="created_at">@tweet.createdAt</div>
+      </div>
+    }
+  </div>
+</div>
+}
